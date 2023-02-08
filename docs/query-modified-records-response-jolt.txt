@@ -1,0 +1,69 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "value": {
+        "*": {
+          "id": "result[&1].id",
+          "project": {
+            "id": "result[&2].fields.projectId",
+             "name": "result[&2].fields.projectName"
+          },
+          "definition": {
+            "id": "result[&2].fields.pipelineId",
+            "name": "result[&2].fields.pipelineName"
+          },
+          "requestedFor": {
+            "uniqueName": "result[&2].fields.requestedFor"
+          },
+          "triggerInfo": {
+            "ci.message": "result[&2].fields.triggerInfo"
+          },
+          "lastChangedBy": {
+            "displayName": "result[&2].fields.lastChangedBy"
+          },
+          "repository": {
+            "name": "result[&2].fields.repositoryName",
+            "type": "result[&2].fields.repositoryType"
+          },
+          "queue": {
+            "pool": {
+              "name": "result[&3].fields.agentPool"
+            }
+          },
+          "*": "result[&1].fields.&"
+        }
+      }
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "totalrecords": "=size(@(1,result))",
+      "result": {
+        "*": {
+          "id": "=toString"
+        }
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "totalrecords": "&",
+      "result": {
+        "*": {
+          "id": "result[&1].&",
+          "fields": "result[&1].&"
+        }
+      }
+    }
+  },
+  {
+    "operation": "default",
+    "spec": {
+      "totalrecords": 0,
+      "result": []
+    }
+  }
+]

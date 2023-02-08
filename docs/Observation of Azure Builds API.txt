@@ -1,0 +1,26 @@
+1) API Request and Response payloads are in JSON format
+-----> No Risk
+
+
+2) It uses basic authentication with no username. 
+-----> No Risk
+
+
+3) The Modified Date Field is finishTime
+-----> No Risk
+
+
+4) Metadata:
+	i) There is project scope
+	ii There is no issue type scope
+-----> No Risk
+
+
+5) Field Mapping:
+	i) There are standard fields published in the documentation.
+	ii) There is no custom field mentioned in the documentation.
+-----> No Risk
+
+
+6) The date format is dd-MM-yyyy'T'HH:mm:ss.SSSSSSSZ
+-----> No Risk 

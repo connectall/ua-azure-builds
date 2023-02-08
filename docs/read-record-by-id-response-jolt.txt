@@ -1,0 +1,48 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "&",
+      "definition": {
+        "id": "fields.pipelineId",
+        "name": "fields.pipelineName"
+      },
+      "project": {
+        "id": "fields.projectId",
+        "name": "fields.projectName"
+      },
+      "requestedFor": {
+        "uniqueName": "fields.requestedFor"
+      },
+      "triggerInfo": {
+        "ci.message": "fields.triggerInfo"
+      },
+      "lastChangedBy": {
+        "displayName": "fields.lastChangedBy"
+      },
+      "repository": {
+        "name": "fields.repositoryName",
+        "type": "fields.repositoryType"
+      },
+      "queue": {
+        "pool": {
+          "name": "fields.agentPool"
+        }
+      },
+      "*": "fields.&"
+    }
+  },
+  {
+    "operation": "modify-overwrite-beta",
+    "spec": {
+      "id": "=toString"
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "&",
+      "fields": "&"
+    }
+  }
+ ]
