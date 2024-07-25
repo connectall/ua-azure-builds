@@ -1,4 +1,4 @@
-# azure-builds_universal_adapter
+# ua-azure-builds
  Adapter will get all the build related information created in a Pipeline. 
 
 1) It has been tested with 24 fields.
